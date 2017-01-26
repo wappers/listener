@@ -12,6 +12,7 @@ public class App {
 	public App() {
 		EventEngine.emit(new Event1(), this::apply1);
 		EventEngine.emit(new Event2(), this::apply2);
+		EventEngine.emit(new Event2(), this::apply1);
 	}
 
 	public void apply1(Event1 event) {
